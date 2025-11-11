@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
@@ -19,11 +20,12 @@
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .header-container {
             display: flex;
             align-items: center;
@@ -31,24 +33,24 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-        
+
         .logo-img {
             width: 80px;
             height: 80px;
             object-fit: contain;
         }
-        
+
         .header-text {
             text-align: center;
         }
-        
+
         .company-address {
             text-align: center;
             color: #7f8c8d;
             font-size: 0.9rem;
             margin-top: 5px;
         }
-        
+
         /* Add header to all pages in the appointment letter */
         .page-header {
             display: flex;
@@ -57,32 +59,35 @@
             margin-bottom: 30px;
             padding-bottom: 15px;
             border-bottom: 2px solid #3498db;
+            width: 100%;
         }
-        
+
         .page-logo {
             width: 60px;
             height: 60px;
             object-fit: contain;
+            flex-shrink: 0;
         }
-        
+
         .page-company-info {
             text-align: center;
             flex-grow: 1;
+            margin: 0 20px;
         }
-        
+
         .page-company-name {
             font-size: 1.4rem;
             font-weight: 700;
             color: #2c3e50;
             margin: 0;
         }
-        
+
         .page-company-address {
             font-size: 0.8rem;
             color: #7f8c8d;
             margin: 2px 0 0 0;
         }
-        
+
         header {
             background: rgba(255, 255, 255, 0.95);
             padding: 30px;
@@ -92,24 +97,42 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
         }
-        
+
+
         .logo {
             font-size: 2.8rem;
             font-weight: 700;
             color: #2c3e50;
             margin-bottom: 10px;
         }
-        
+
         .logo span {
             color: #3498db;
         }
-        
+
+        .page-header-simple {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            width: 100%;
+        }
+
+        .page-logo-centered {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
         .tagline {
             font-size: 1.2rem;
             color: #7f8c8d;
             font-weight: 500;
         }
-        
+
         .card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -119,11 +142,11 @@
             backdrop-filter: blur(10px);
             transition: transform 0.3s ease;
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
         }
-        
+
         .card-title {
             font-size: 1.8rem;
             color: #2c3e50;
@@ -132,11 +155,11 @@
             border-bottom: 3px solid #3498db;
             display: inline-block;
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -144,8 +167,10 @@
             color: #2c3e50;
             font-size: 1rem;
         }
-        
-        input, select, textarea {
+
+        input,
+        select,
+        textarea {
             width: 100%;
             padding: 14px 18px;
             border: 2px solid #e8f4fc;
@@ -154,26 +179,28 @@
             transition: all 0.3s;
             background: #f8fbfe;
         }
-        
-        input:focus, select:focus, textarea:focus {
+
+        input:focus,
+        select:focus,
+        textarea:focus {
             border-color: #3498db;
             outline: none;
             background: white;
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
         }
-        
+
         .form-row {
             display: flex;
             flex-wrap: wrap;
             margin: 0 -12px;
         }
-        
+
         .form-col {
             flex: 1;
             padding: 0 12px;
             min-width: 280px;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -190,37 +217,37 @@
             transition: all 0.3s;
             text-decoration: none;
         }
-        
+
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
         }
-        
+
         .btn-block {
             display: flex;
             width: 100%;
         }
-        
+
         .btn-success {
             background: linear-gradient(135deg, #27ae60, #219a52);
         }
-        
+
         .btn-warning {
             background: linear-gradient(135deg, #e67e22, #d35400);
         }
-        
+
         .btn-outline {
             background: transparent;
             border: 2px solid #3498db;
             color: #3498db;
         }
-        
+
         .btn-outline:hover {
             background: #3498db;
             color: white;
         }
-        
-        .appointment-letter {
+
+        /* .appointment-letter {
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -229,15 +256,21 @@
             display: none;
             max-height: 80vh;
             overflow-y: auto;
+        } */
+
+        .appointment-letter {
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
         }
-        
+
         .letter-header {
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 2px solid #ecf0f1;
         }
-        
+
         .company-name {
             font-size: 2.5rem;
             color: #2c3e50;
@@ -245,71 +278,107 @@
             margin-bottom: 10px;
             text-align: center;
         }
-        
+
         .company-tagline {
             color: #7f8c8d;
             font-size: 1.1rem;
         }
-        
+
         .letter-content {
             line-height: 1.8;
             font-size: 1.1rem;
         }
-        
-        
-.page {
-    page-break-after: always;
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 2px solid #000000;
-    background: white;
-    min-height: 297mm;
-    height: 297mm; /* Fixed height for consistent layout */
-    width: 210mm;
-    margin-left: auto;
-    margin-right: auto;
-    border-right: 3px solid #000000;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0;
-    overflow: hidden; /* Prevent content overflow */
-}
 
-.page-content {
-    flex: 1;
-    overflow-y: auto;
-    padding-bottom: 10px;
-    max-height: calc(297mm - 120px); /* Reserve space for footer */
-}
+        .page {
+            page-break-after: always;
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #000000 !important;
+            background: white;
+            min-height: 297mm;
+            width: 210mm;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: block;
+            /* Change from flex to block */
+            border-radius: 0;
+            box-sizing: border-box;
+        }
 
-/* Remove any conflicting border styles */
-.page::before, 
-.page::after {
-    display: none;
-}
+        .page-content {
+            min-height: calc(100% - 80px);
+            /* Reserve space for footer */
+            margin-bottom: 20px;
+        }
 
-/* Ensure print styles also use single border */
-@media print {
-    .page {
-        border: 2px solid #000000 !important;
-        margin: 0;
-        padding: 20px;
-        box-shadow: none;
-        width: 210mm;
-        height: 297mm;
-        page-break-after: always;
-    }
-    
-    .page:last-child {
-        page-break-after: avoid;
-    }
-}
+        .page-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            background: white;
+        }
+
+        /* Force borders in print */
+        @media print {
+            .page {
+                border: 2px solid #000000 !important;
+                margin: 0;
+                padding: 20px;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+                page-break-after: always;
+                position: relative;
+            }
+
+            .page-footer {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+            }
+
+            .page:last-child {
+                page-break-after: avoid;
+            }
+        }
+
+
+        /* Remove any conflicting border styles */
+        .page::before,
+        .page::after {
+            display: none;
+        }
+
+        /* Ensure print styles also use single border */
+        @media print {
+            .page {
+                border: 2px solid #000000 !important;
+                margin: 0;
+                padding: 20px;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+                page-break-after: always;
+            }
+
+            .page:last-child {
+                page-break-after: avoid;
+            }
+        }
+
         .page-content {
             flex: 1;
         }
-        
+
         .page-footer {
             margin-top: auto;
             padding-top: 20px;
@@ -318,44 +387,44 @@
             font-size: 0.9rem;
             color: #555;
         }
-        
+
         .page:last-child {
             page-break-after: avoid;
         }
-        
+
         .section-title {
             color: #2c3e50;
-            border-bottom: 2px solid #3498db;
+            /* border-bottom: 2px solid #3498db; */
             padding-bottom: 10px;
             margin: 25px 0 15px 0;
             font-size: 1.4rem;
             text-align: center;
         }
-        
+
         .clause {
             margin-bottom: 15px;
             text-align: justify;
         }
-        
+
         .clause-title {
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 5px;
             font-size: 1.1rem;
         }
-        
+
         .signature-area {
             margin-top: 50px;
             padding: 20px;
             border-top: 2px solid #ecf0f1;
         }
-        
+
         .signature-line {
             width: 300px;
             border-bottom: 1px solid #333;
             margin: 40px 0 5px 0;
         }
-        
+
         .action-buttons {
             display: flex;
             justify-content: center;
@@ -368,7 +437,7 @@
             padding: 20px;
             border-top: 2px solid #ecf0f1;
         }
-        
+
         .success-message {
             background: linear-gradient(135deg, #d4edda, #c3e6cb);
             border-left: 5px solid #28a745;
@@ -378,7 +447,7 @@
             display: none;
             animation: slideIn 0.5s ease;
         }
-        
+
         .error-message {
             background: linear-gradient(135deg, #f8d7da, #f5c6cb);
             border-left: 5px solid #dc3545;
@@ -388,18 +457,25 @@
             display: none;
             animation: slideIn 0.5s ease;
         }
-        
+
         @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
-        
+
         .loading {
             display: none;
             text-align: center;
             padding: 20px;
         }
-        
+
         .spinner {
             border: 4px solid #f3f3f3;
             border-top: 4px solid #3498db;
@@ -409,67 +485,73 @@
             animation: spin 1s linear infinite;
             margin: 0 auto 15px;
         }
-        
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
-        
+
         .employee-details-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        
+
         .employee-details-table td {
             padding: 8px 12px;
             border-bottom: 1px solid #ddd;
         }
-        
+
         .employee-details-table td:first-child {
             font-weight: bold;
             width: 30%;
         }
-        
+
         .salary-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        
-        .salary-table th, .salary-table td {
+
+        .salary-table th,
+        .salary-table td {
             padding: 10px;
             border: 1px solid #ddd;
             text-align: left;
         }
-        
+
         .salary-table th {
             background-color: #f8f9fa;
             font-weight: bold;
         }
-        
+
         @media (max-width: 768px) {
             .form-col {
                 flex: 100%;
             }
-            
+
             .action-buttons {
                 flex-direction: column;
             }
-            
+
             .btn {
                 width: 100%;
                 margin-bottom: 10px;
             }
-            
+
             .card {
                 padding: 25px;
             }
-            
+
             .appointment-letter {
                 padding: 30px;
             }
-            
+
             .page {
                 padding: 10px;
                 width: 100%;
@@ -482,9 +564,12 @@
             body * {
                 visibility: hidden;
             }
-            .appointment-letter, .appointment-letter * {
+
+            .appointment-letter,
+            .appointment-letter * {
                 visibility: visible;
             }
+
             .appointment-letter {
                 position: absolute;
                 left: 0;
@@ -493,9 +578,11 @@
                 box-shadow: none;
                 padding: 0;
             }
+
             .action-buttons {
                 display: none;
             }
+
             .page {
                 margin: 0;
                 padding: 20px;
@@ -505,23 +592,26 @@
                 height: 297mm;
                 page-break-after: always;
             }
+
             .page:last-child {
                 page-break-after: avoid;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <div class="header-container">
-                <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="logo-img" onerror="this.style.display='none'">
+                <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="logo-img"
+                    onerror="this.style.display='none'">
                 <div class="header-text">
                     <div class="logo">Hamsini <span>Tech</span> Solutions</div>
                 </div>
             </div>
         </header>
-        
+
         <div class="card" id="employeeFormCard">
             <h2 class="card-title">Employee Appointment Form</h2>
             <form id="employeeForm">
@@ -539,7 +629,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-col">
                         <div class="form-group">
@@ -564,7 +654,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-col">
                         <div class="form-group">
@@ -587,7 +677,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-col">
                         <div class="form-group">
@@ -602,7 +692,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-col">
                         <div class="form-group">
@@ -625,7 +715,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-col">
                         <div class="form-group">
@@ -640,54 +730,55 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="address">Permanent Address *</label>
                     <textarea id="address" name="address" rows="3" required></textarea>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="reportingManager">Reporting Manager *</label>
                     <input type="text" id="reportingManager" name="reportingManager" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="hrManager">HR Manager *</label>
                     <input type="text" id="hrManager" name="hrManager" value="Manikanta Sharma" required>
                 </div>
-                
+
                 <button type="submit" class="btn btn-block">
                     <span>📄 Generate Appointment Letter</span>
                 </button>
             </form>
         </div>
-        
+
         <div class="loading" id="loadingIndicator">
             <div class="spinner"></div>
             <p>Generating your appointment letter...</p>
         </div>
-        
+
         <div class="success-message" id="successMessage">
             <h3>✅ Success!</h3>
             <p>Appointment letter has been sent successfully to <strong id="sentEmail"></strong>!</p>
         </div>
-        
+
         <div class="error-message" id="errorMessage">
             <h3>❌ Error!</h3>
             <p id="errorText">Something went wrong. Please try again.</p>
         </div>
-        
+
         <div class="appointment-letter" id="appointmentLetter" style="display: none;">
             <!-- Page 1: Main Appointment Letter -->
             <div class="page">
                 <div class="page-content">
                     <div class="page-header">
-                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo" onerror="this.style.display='none'">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo"
+                            onerror="this.style.display='none'">
                         <div class="company-name">Hamsini Tech Solutions</div>
                     </div>
-                    
+
                     <h2 class="section-title">APPOINTMENT LETTER</h2>
-                    
+
                     <div style="margin-bottom: 20px;">
                         <p><strong>Date:</strong> <span id="letterDate"></span></p>
                         <p><strong>Name:</strong> <span id="employeeName"></span></p>
@@ -695,279 +786,414 @@
                         <p><strong>Email:</strong> <span id="employeeEmail"></span></p>
                         <p><strong>Address:</strong> <span id="employeeAddress"></span></p>
                     </div>
-                    
+
                     <div class="clause">
                         <p>Dear <strong id="employeeSalutation"></strong>,</p>
                         <p>Welcome to Hamsini Tech Solutions!</p>
                         <p>Congratulations — we are delighted to have you on board.</p>
-                        <p>Following your application and subsequent personal interview, we are pleased to offer you the position of <strong id="offerPosition"></strong>. We look forward to providing you with a rewarding and challenging work environment that supports your professional growth and success.</p>
+                        <p>Following your application and subsequent personal interview, we are pleased to offer you the
+                            position of <strong id="offerPosition"></strong>. We look forward to providing you with a
+                            rewarding and challenging work environment that supports your professional growth and
+                            success.</p>
                     </div>
-                    
+
                     <div style="margin: 20px 0;">
                         <p><strong>Work Location:</strong> <span id="employeeWorkLocation"></span></p>
                         <p><strong>Date of Joining:</strong> <span id="employeeJoiningDate"></span></p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Compensation & Benefits:</div>
-                        <p>You will receive a stipend of <strong id="monthlyStipend"></strong> per month during your initial <strong id="trainingPeriodText"></strong> of training and probation.</p>
-                        <p>Upon successful completion of this period, you will be entitled to a Cost to Company (CTC) of <strong id="annualCtc"></strong> per annum, as outlined in Annexure III.</p>
-                        <p>Statutory deductions such as Income Tax and Provident Fund (PF) will be made at source as per applicable laws.</p>
+                        <p>You will receive a stipend of <strong id="monthlyStipend"></strong> per month during your
+                            initial <strong id="trainingPeriodText"></strong> of training and probation.</p>
+                        <p>Upon successful completion of this period, you will be entitled to a Cost to Company (CTC) of
+                            <strong id="annualCtc"></strong> per annum, as outlined in Annexure III.</p>
+                        <p>Statutory deductions such as Income Tax and Provident Fund (PF) will be made at source as per
+                            applicable laws.</p>
                     </div>
-                    
+
                     <div class="clause">
-                        <p>Please refer to Annexure I for the terms and conditions of your employment. In addition to what is specified in this offer letter, you are required to comply with all internal policies, rules, and regulations of Hamsini Tech Solutions, which will be made available to you upon commencement of your employment.</p>
-                        <p>This offer is effective from <strong id="effectiveDate"></strong> and will remain valid for two (2) days from the date of issue. Please sign and return a copy of this letter as a token of your formal acceptance.</p>
-                        <p>By signing this letter, you confirm your acceptance of the offer. For all relevant purposes, this letter of offer shall be deemed to constitute your "Offer of Appointment."</p>
-                        <p>We take this opportunity to welcome you once again to Hamsini Tech Solutions and wish you a long and successful career with us.</p>
+                        <p>Please refer to Annexure I for the terms and conditions of your employment. In addition to
+                            what is specified in this offer letter, you are required to comply with all internal
+                            policies, rules, and regulations of Hamsini Tech Solutions, which will be made available to
+                            you upon commencement of your employment.</p>
+                        <p>This offer is effective from <strong id="effectiveDate"></strong> and will remain valid for
+                            two (2) days from the date of issue. Please sign and return a copy of this letter as a token
+                            of your formal acceptance.</p>
+                        <p>By signing this letter, you confirm your acceptance of the offer. For all relevant purposes,
+                            this letter of offer shall be deemed to constitute your "Offer of Appointment."</p>
+                        <p>We take this opportunity to welcome you once again to Hamsini Tech Solutions and wish you a
+                            long and successful career with us.</p>
                     </div>
-                    
-                   
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                     <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 2: Annexure I -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">ANNEXURE – I</h2>
-                    
+
                     <div class="clause">
                         <p>By accepting this offer, you are also confirming that:</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">1. Previous Employment</div>
-                        <p>You have lawfully terminated your employment with your previous employer (if any), in compliance with their terms and conditions.</p>
-                        <p>There are no existing contractual obligations from your previous employment that would prevent you from fulfilling your responsibilities or taking up this position with Hamsini Tech Solutions.</p>
-                        <p>Hamsini Tech Solutions is not liable for any past dues or obligations owed by you as part of the termination of any previous employment.</p>
+                        <p>You have lawfully terminated your employment with your previous employer (if any), in
+                            compliance with their terms and conditions.</p>
+                        <p>There are no existing contractual obligations from your previous employment that would
+                            prevent you from fulfilling your responsibilities or taking up this position with Hamsini
+                            Tech Solutions.</p>
+                        <p>Hamsini Tech Solutions is not liable for any past dues or obligations owed by you as part of
+                            the termination of any previous employment.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">2. Training Period</div>
-                        <p>You will be a trainee under a respective Team Lead / Developer / Senior until your performance meets company criteria.</p>
-                        <p>If you accept this offer, you are required to join on <strong id="joiningDateAnnexure"></strong>. If you are unable to report on the mentioned date, you must inform the company in writing.</p>
+                        <p>You will be a trainee under a respective Team Lead / Developer / Senior until your
+                            performance meets company criteria.</p>
+                        <p>If you accept this offer, you are required to join on <strong
+                                id="joiningDateAnnexure"></strong>. If you are unable to report on the mentioned date,
+                            you must inform the company in writing.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">3. Professional Commitment</div>
-                        <p>You are expected to display high levels of initiative, efficiency, and professionalism in your work. You must perform your duties and responsibilities diligently, to the best of your abilities, and to the satisfaction of the company.</p>
-                        <p>This level of commitment is expected for all tasks within your job profile and for any additional responsibilities reasonably assigned during your employment. It is your responsibility to ensure quality output in all activities you undertake, whether individually or as part of a team.</p>
-                        <p>As a full-time employee, you shall devote your time and capabilities exclusively to the discharge of your official duties and responsibilities.</p>
+                        <p>You are expected to display high levels of initiative, efficiency, and professionalism in
+                            your work. You must perform your duties and responsibilities diligently, to the best of your
+                            abilities, and to the satisfaction of the company.</p>
+                        <p>This level of commitment is expected for all tasks within your job profile and for any
+                            additional responsibilities reasonably assigned during your employment. It is your
+                            responsibility to ensure quality output in all activities you undertake, whether
+                            individually or as part of a team.</p>
+                        <p>As a full-time employee, you shall devote your time and capabilities exclusively to the
+                            discharge of your official duties and responsibilities.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">4. Non-Competition</div>
-                        <p>You agree not to engage in any commercial activities that may conflict with your work or availability during your employment with the company. However, you are free to participate in non-profit activities outside official working hours, provided they do not interfere with your professional obligations.</p>
+                        <p>You agree not to engage in any commercial activities that may conflict with your work or
+                            availability during your employment with the company. However, you are free to participate
+                            in non-profit activities outside official working hours, provided they do not interfere with
+                            your professional obligations.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">5. Remuneration</div>
-                        <p>You will be entitled to the compensation (salary and applicable benefits) as detailed in Annexure III.</p>
+                        <p>You will be entitled to the compensation (salary and applicable benefits) as detailed in
+                            Annexure III.</p>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                     <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 3: Personal Particulars & Duties -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">PERSONAL PARTICULARS & DUTIES</h2>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Personal Particulars</div>
-                        <p>You hereby confirm that all personal and professional information furnished by you is current, true, and accurate.</p>
-                        <p>You must keep Hamsini Tech Solutions informed of any changes in your residential address, family status, or other relevant personal information.</p>
-                        <p>If, at any time, Hamsini Tech Solutions, at its sole discretion, believes there is any discrepancy, inaccuracy, or falsification in the information or documents provided by you — including those related to your qualifications or experience — or if you fail to cooperate with the company or its authorized agents during background or reference verification, Hamsini Tech Solutions reserves the right to suspend or terminate your employment immediately without notice.</p>
+                        <p>You hereby confirm that all personal and professional information furnished by you is
+                            current, true, and accurate.</p>
+                        <p>You must keep Hamsini Tech Solutions informed of any changes in your residential address,
+                            family status, or other relevant personal information.</p>
+                        <p>If, at any time, Hamsini Tech Solutions, at its sole discretion, believes there is any
+                            discrepancy, inaccuracy, or falsification in the information or documents provided by you —
+                            including those related to your qualifications or experience — or if you fail to cooperate
+                            with the company or its authorized agents during background or reference verification,
+                            Hamsini Tech Solutions reserves the right to suspend or terminate your employment
+                            immediately without notice.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Duties</div>
-                        <p>The roles, responsibilities, and duties associated with your designation or employment will be specified by Hamsini Tech Solutions from time to time.</p>
-                        <p>Hamsini Tech Solutions may, at its sole discretion and upon notice, alter or otherwise modify these roles, responsibilities, and duties as deemed necessary.</p>
-                        <p>You may be required at any time to provide services, directly or indirectly, to Hamsini Tech Solutions, its affiliates, clients, employees, or contractors.</p>
+                        <p>The roles, responsibilities, and duties associated with your designation or employment will
+                            be specified by Hamsini Tech Solutions from time to time.</p>
+                        <p>Hamsini Tech Solutions may, at its sole discretion and upon notice, alter or otherwise modify
+                            these roles, responsibilities, and duties as deemed necessary.</p>
+                        <p>You may be required at any time to provide services, directly or indirectly, to Hamsini Tech
+                            Solutions, its affiliates, clients, employees, or contractors.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Office Hours</div>
-                        <p>Our regular office hours are 9 hours per day, Monday to Friday, with a 40-minute lunch break.</p>
-                        <p>These hours may change in the future to meet project or client requirements across different global time zones.</p>
+                        <p>Our regular office hours are 9 hours per day, Monday to Friday, with a 40-minute lunch break.
+                        </p>
+                        <p>These hours may change in the future to meet project or client requirements across different
+                            global time zones.</p>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                     <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 4: Training & Leave Policy -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">TRAINING & LEAVE POLICY</h2>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Training</div>
-                        <p>You are expected to make yourself available for any training programs whenever required. Such training will be conducted at the company's expense.</p>
-                        <p>Please note that refusal to participate in a training program, without a valid or justified reason, may result in immediate termination of your employment.</p>
+                        <p>You are expected to make yourself available for any training programs whenever required. Such
+                            training will be conducted at the company's expense.</p>
+                        <p>Please note that refusal to participate in a training program, without a valid or justified
+                            reason, may result in immediate termination of your employment.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Assignment, Transfer, and Deputation</div>
-                        <p>You may, at any time, be assigned, transferred, or deputed to any office, department, or unit of Hamsini Tech Solutions, or to its affiliates, clients, or contractors, within India or abroad.</p>
+                        <p>You may, at any time, be assigned, transferred, or deputed to any office, department, or unit
+                            of Hamsini Tech Solutions, or to its affiliates, clients, or contractors, within India or
+                            abroad.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Leave Policy</div>
                         <p>• Employees under probation are not entitled to any leave.</p>
-                        <p>• After successful completion of the probation period, employees are entitled to one (1) day of casual leave for every completed month of service.</p>
+                        <p>• After successful completion of the probation period, employees are entitled to one (1) day
+                            of casual leave for every completed month of service.</p>
                         <p>• A maximum of three (3) days of accumulated leave may be availed at one time.</p>
-                        <p>• Leave applications must be submitted to hamsinitechsolutions@gmail.com at least three (3) days prior to the intended leave date.</p>
-                        <p>• Any absence without proper approval from the competent authority will result in salary deduction and may also attract disciplinary action as per company policy.</p>
-                        <p>The Hamsini Tech Solutions Leave Policy applies to all employees and may be modified by the company at its sole discretion, with prior notice.</p>
+                        <p>• Leave applications must be submitted to hamsinitechsolutions@gmail.com at least three (3)
+                            days prior to the intended leave date.</p>
+                        <p>• Any absence without proper approval from the competent authority will result in salary
+                            deduction and may also attract disciplinary action as per company policy.</p>
+                        <p>The Hamsini Tech Solutions Leave Policy applies to all employees and may be modified by the
+                            company at its sole discretion, with prior notice.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Medical Insurance</div>
-                        <p>You will be covered under the Group Medical and Personal Accident Insurance Policies of Hamsini Tech Solutions after successful completion of three (3) months of continuous employment with the company.</p>
+                        <p>You will be covered under the Group Medical and Personal Accident Insurance Policies of
+                            Hamsini Tech Solutions after successful completion of three (3) months of continuous
+                            employment with the company.</p>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                    <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 5: Performance & Probation -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">PERFORMANCE & PROBATION</h2>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Performance Evaluation</div>
-                        <p>You will be entitled to participate in the company's performance review process in accordance with company policy as follows:</p>
+                        <p>You will be entitled to participate in the company's performance review process in accordance
+                            with company policy as follows:</p>
                         <p>1. You must participate in the assignment test conducted by the company every day.</p>
-                        <p>2. You must also participate in the review exam conducted every 15 days to evaluate your performance.</p>
-                        <p>3. Your performance in these tests will be reviewed by the company after 75 days, and the results will be communicated via email. If your performance is unsatisfactory or you fail to meet the required standards, your employment will be terminated.</p>
+                        <p>2. You must also participate in the review exam conducted every 15 days to evaluate your
+                            performance.</p>
+                        <p>3. Your performance in these tests will be reviewed by the company after 75 days, and the
+                            results will be communicated via email. If your performance is unsatisfactory or you fail to
+                            meet the required standards, your employment will be terminated.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Probation / Confirmation</div>
-                        <p>1. You will initially be on probation for a period of <strong id="probationPeriodText"></strong> from the effective start date of your employment/training with Hamsini Tech Solutions, which may be extended or reduced at the sole discretion of the company.</p>
-                        <p>2. The employer shall have the opportunity to assess your performance, attitude, skills, and other employment-related attributes.</p>
-                        <p>3. You shall have the opportunity to learn about both the employer and the position of employment.</p>
-                        <p>4. Either party may terminate the employment relationship at any time during the initial three (3) months period with a seven (7) days' advance notice and a justifiable reason.</p>
+                        <p>1. You will initially be on probation for a period of <strong
+                                id="probationPeriodText"></strong> from the effective start date of your
+                            employment/training with Hamsini Tech Solutions, which may be extended or reduced at the
+                            sole discretion of the company.</p>
+                        <p>2. The employer shall have the opportunity to assess your performance, attitude, skills, and
+                            other employment-related attributes.</p>
+                        <p>3. You shall have the opportunity to learn about both the employer and the position of
+                            employment.</p>
+                        <p>4. Either party may terminate the employment relationship at any time during the initial
+                            three (3) months period with a seven (7) days' advance notice and a justifiable reason.</p>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                    <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 6: Termination Policies -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">TERMINATION POLICIES</h2>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Termination of Employment</div>
-                        <p>1. During the initial probation period, as mentioned in your offer letter, your performance will be closely monitored. If your performance is not satisfactory, the company reserves the right to terminate your services without prior notice.</p>
-                        <p>2. Unauthorized absence or absence without permission for two (2) consecutive working days will result in loss of lien on employment, and your employment shall automatically terminate without notice or payment in lieu of notice.</p>
-                        <p>3. You will be governed by the company's Code of Conduct. Any breach, non-conformance, or violation of contractual obligations or policies may result in termination without notice.</p>
-                        <p>4. After completion of your probation period, you must accept client package and location assignments. Failure to do so may result in termination.</p>
-                        <p>5. Hamsini Tech Solutions may terminate your employment with seven (7) days' notice, with or without cause.</p>
+                        <p>1. During the initial probation period, as mentioned in your offer letter, your performance
+                            will be closely monitored. If your performance is not satisfactory, the company reserves the
+                            right to terminate your services without prior notice.</p>
+                        <p>2. Unauthorized absence or absence without permission for two (2) consecutive working days
+                            will result in loss of lien on employment, and your employment shall automatically terminate
+                            without notice or payment in lieu of notice.</p>
+                        <p>3. You will be governed by the company's Code of Conduct. Any breach, non-conformance, or
+                            violation of contractual obligations or policies may result in termination without notice.
+                        </p>
+                        <p>4. After completion of your probation period, you must accept client package and location
+                            assignments. Failure to do so may result in termination.</p>
+                        <p>5. Hamsini Tech Solutions may terminate your employment with seven (7) days' notice, with or
+                            without cause.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Hire Terms</div>
                         <p>Your employment with the company is subject to the following conditions:</p>
                         <p>1. You must submit all necessary documentation as directed by the company.</p>
                         <p>2. You must complete required certifications or prescribed examinations.</p>
-                        <p>3. You must provide a clear relieving or discharge letter from your previous employer within thirty (30) days of joining the company.</p>
-                        <p>4. You confirm that your acceptance of this employment does not violate any existing agreement or restriction from prior employment.</p>
+                        <p>3. You must provide a clear relieving or discharge letter from your previous employer within
+                            thirty (30) days of joining the company.</p>
+                        <p>4. You confirm that your acceptance of this employment does not violate any existing
+                            agreement or restriction from prior employment.</p>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                    <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 7: Code of Conduct -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">CODE OF CONDUCT & POLICIES</h2>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Code of Conduct</div>
-                        <p>1. Your remuneration details are confidential and must not be disclosed. Any breach will be treated seriously.</p>
+                        <p>1. Your remuneration details are confidential and must not be disclosed. Any breach will be
+                            treated seriously.</p>
                         <p>2. You must maintain discipline, professionalism, and dignity in all dealings.</p>
-                        <p>3. Any change in your personal information must be reported to the company within three (3) days.</p>
+                        <p>3. Any change in your personal information must be reported to the company within three (3)
+                            days.</p>
                         <p>4. Your salary will be effective from your training start date.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Non-Disclosure & Confidentiality</div>
-                        <p>You agree to sign and abide by the company's Non-Disclosure, Non-Solicitation, and Non-Compete Agreements. You must not disclose confidential information, including remuneration details, to any other employee. Breach of confidentiality will be treated as serious misconduct.</p>
-                        <p>During and after your employment, you must not disclose, share, or use any confidential company information for personal or external purposes.</p>
+                        <p>You agree to sign and abide by the company's Non-Disclosure, Non-Solicitation, and
+                            Non-Compete Agreements. You must not disclose confidential information, including
+                            remuneration details, to any other employee. Breach of confidentiality will be treated as
+                            serious misconduct.</p>
+                        <p>During and after your employment, you must not disclose, share, or use any confidential
+                            company information for personal or external purposes.</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Intellectual Property</div>
-                        <p>Any invention, process improvement, operational enhancement, or intellectual property created during your employment with Hamsini Tech Solutions will be the exclusive property of the company. You agree to assign all such rights to the company for its use and protection.</p>
+                        <p>Any invention, process improvement, operational enhancement, or intellectual property created
+                            during your employment with Hamsini Tech Solutions will be the exclusive property of the
+                            company. You agree to assign all such rights to the company for its use and protection.</p>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="page-footer">
-                    <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 8: Annexure II - Documents Required -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">ANNEXURE - II</h2>
                     <h3 style="color: #2c3e50; margin: 20px 0 10px 0;">DOCUMENTS REQUIRED AT THE TIME OF JOINING</h3>
                     <p><strong>NOTE:</strong> Joining will not happen without these documents.</p>
-                    
+
                     <div class="clause">
                         <p><strong>A.</strong> Original copy of Hamsini Tech Solutions offer letter</p>
-                        <p><strong>B.</strong> DATE OF BIRTH PROOF: Mandatory is Aadhar Card. (Any ONE of the following: Birth Certificate, Xth, XIIth Mark Sheet with DOB details, Passport, PAN Card, Driving License)</p>
-                        <p><strong>C.</strong> PHOTO ID: Aadhar OR PAN Card (ONE of the following: Voters ID, Driving License, Passport, or Bank Passbook with photograph)</p>
-                        <p><strong>D.</strong> PERMANENT ADDRESS PROOF: (ONE of the following: Passport, Driving License, Voter's ID, Nationalized Bank Passbook with photograph and address, Electricity Bill)</p>
-                        <p><strong>E.</strong> EDUCATION QUALIFICATION PROOF: (mark sheets & degree are important) (Xth, XIIth, Graduation, Post-Graduation Certificate)</p>
+                        <p><strong>B.</strong> DATE OF BIRTH PROOF: Mandatory is Aadhar Card. (Any ONE of the following:
+                            Birth Certificate, Xth, XIIth Mark Sheet with DOB details, Passport, PAN Card, Driving
+                            License)</p>
+                        <p><strong>C.</strong> PHOTO ID: Aadhar OR PAN Card (ONE of the following: Voters ID, Driving
+                            License, Passport, or Bank Passbook with photograph)</p>
+                        <p><strong>D.</strong> PERMANENT ADDRESS PROOF: (ONE of the following: Passport, Driving
+                            License, Voter's ID, Nationalized Bank Passbook with photograph and address, Electricity
+                            Bill)</p>
+                        <p><strong>E.</strong> EDUCATION QUALIFICATION PROOF: (mark sheets & degree are important) (Xth,
+                            XIIth, Graduation, Post-Graduation Certificate)</p>
                         <p><strong>F.</strong> PASSPORT SIZE PHOTOGRAPHS: 5 copies (with White Background ONLY)</p>
                         <p><strong>G.</strong> PAN NUMBER: Photocopy of PAN Card</p>
                         <p><strong>H.</strong> Professional Relieving or Experience Letter from previous employer</p>
@@ -975,22 +1201,29 @@
                         <p><strong>J.</strong> Marriage Certificate (if applicable)</p>
                         <p><strong>K.</strong> Self-declaration Medical Fitness form</p>
                     </div>
-                   </div> 
-                    
-                
+                </div>
+
+
                 <div class="page-footer">
-                    <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions@gmail.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitechs@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 9: Annexure III - Salary Breakdown -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">ANNEXURE - III</h2>
                     <h3 style="color: #2c3e50; margin: 20px 0 10px 0;">REMUNERATION DETAILS</h3>
-                    
+
                     <table class="employee-details-table">
                         <tr>
                             <td>Name:</td>
@@ -1001,7 +1234,7 @@
                             <td id="salaryDesignation"></td>
                         </tr>
                     </table>
-                    
+
                     <table class="salary-table">
                         <thead>
                             <tr>
@@ -1071,12 +1304,14 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <div class="clause" style="margin-top: 20px;">
-                        <p><em>Applicable TDS and statutory amount will be deducted per norms with prior intimation</em></p>
-                        <p><em>Incentives/Variable Pay shall be paid out on a quarterly basis provided the employee is in the payroll on the date of disbursement.</em></p>
+                        <p><em>Applicable TDS and statutory amount will be deducted per norms with prior intimation</em>
+                        </p>
+                        <p><em>Incentives/Variable Pay shall be paid out on a quarterly basis provided the employee is
+                                in the payroll on the date of disbursement.</em></p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Declaration by the employee:</div>
                         <p>I accept the terms and conditions mentioned in the aforesaid ANNEXURE-III</p>
@@ -1086,41 +1321,58 @@
                             <p>Employee Signature</p>
                         </div>
                     </div>
-                    
+
+
+
+
+                    <div class="page-footer">
+                        <center>
+                            <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                        </center>
+                        <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
+                        <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com
+                        </p>
                     </div>
-                
-                
-                <div class="page-footer">
-                    <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
-                    <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
             </div>
 
             <!-- Page 10: Final Acceptance -->
             <div class="page">
                 <div class="page-content">
+                    <div class="page-header-simple">
+                        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" class="page-logo-centered"
+                            onerror="this.style.display='none'">
+                        <div class="page-company-name">Hamsini Tech Solutions</div>
+                    </div>
                     <h2 class="section-title">ACCEPTANCE & SIGNATURES</h2>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Amendments:</div>
-                        <p>The Company, at its discretion, may alter, replace or annul any of the above, should circumstances warrant either as a result of statute or otherwise. All changes will duly be updated on the company intranet and will be duly notified to the employees through proper channels.</p>
+                        <p>The Company, at its discretion, may alter, replace or annul any of the above, should
+                            circumstances warrant either as a result of statute or otherwise. All changes will duly be
+                            updated on the company intranet and will be duly notified to the employees through proper
+                            channels.</p>
                     </div>
-                    
+
                     <div class="clause">
-                        <p>If you agree to accept this position, please notify in writing by signing your name and mentioning the date of joining at the bottom of this page indicating your acceptance of this appointment. A copy of this letter will be provided to you.</p>
-                        <p>Irrespective of whether you join Hamsini Tech Solutions or not, you shall keep all the details contained in this letter confidential.</p>
+                        <p>If you agree to accept this position, please notify in writing by signing your name and
+                            mentioning the date of joining at the bottom of this page indicating your acceptance of this
+                            appointment. A copy of this letter will be provided to you.</p>
+                        <p>Irrespective of whether you join Hamsini Tech Solutions or not, you shall keep all the
+                            details contained in this letter confidential.</p>
                     </div>
-                    
+
                     <div class="clause">
-                        <p style="text-align: center; font-weight: bold;">I take this opportunity to welcome you to Hamsini Tech Solutions</p>
+                        <p style="text-align: center; font-weight: bold;">I take this opportunity to welcome you to
+                            Hamsini Tech Solutions</p>
                     </div>
-                    
+
                     <div class="clause">
                         <div class="clause-title">Acceptance</div>
-                        <p>I (<strong id="acceptanceName"></strong>) hereby confirm acceptance of all of the above terms and conditions, and will join.</p>
+                        <p>I (<strong id="acceptanceName"></strong>) hereby confirm acceptance of all of the above terms
+                            and conditions, and will join.</p>
                     </div>
-                    
+
                     <div class="signature-area">
                         <div style="float: left; width: 45%;">
                             <p><strong>Employee Signature:</strong></p>
@@ -1128,26 +1380,29 @@
                             <p>Name: <strong id="finalEmployeeName"></strong></p>
                             <p>Date: ________________</p>
                         </div>
-                        
+
                         <div style="float: right; width: 45%;">
                             <p><strong>For Hamsini Tech Solutions:</strong></p>
                             <div class="signature-line"></div>
+                            <img src="stamp.png" width="80px" height="70px" />
                             <p>Name: <strong id="companySignatory"></strong></p>
-                            <p> Managing Director  </p>
+                            <p> Managing Director </p>
                             <p>Date: <span id="companySignDate"></span></p>
                         </div>
                         <div style="clear: both;"></div>
                     </div>
                 </div>
-                </div>
-                
+
+
                 <div class="page-footer">
-                     <center><p><strong>HAMSINI TECH SOLUTIONS</strong></p></center>
+                    <center>
+                        <p><strong>HAMSINI TECH SOLUTIONS</strong></p>
+                    </center>
                     <p>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</p>
-                    <p>Phone: +91 9515345553  | Email: hamsinitechsolutions.com | Website: www.hamsinitechsolutions.com</p>
+                    <p>Phone: +91 9515345553 | Email: hamsinitech@gmail.com | Website: www.hamsinitechsolutions.com</p>
                 </div>
-            
-            
+            </div>
+
             <div class="action-buttons">
                 <button class="btn btn-success" id="sendEmailBtn">
                     <span>Send via Email</span>
@@ -1161,20 +1416,20 @@
                 <button class="btn btn-outline" id="backBtn">
                     <span>← Back to Form</span>
                 </button>
-                </div>
             </div>
         </div>
     </div>
-    
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
         const { jsPDF } = window.jspdf;
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const BASE_URL = 'http://localhost:8082/api';
-            
+
             // Set current date
             const today = new Date();
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -1182,10 +1437,10 @@
             currentDateElements.forEach(el => {
                 if (el) el.textContent = today.toLocaleDateString('en-US', options);
             });
-            
+
             // Set minimum date for start date to today
             document.getElementById('startDate').min = new Date().toISOString().split('T')[0];
-            
+
             // Elements
             const employeeForm = document.getElementById('employeeForm');
             const employeeFormCard = document.getElementById('employeeFormCard');
@@ -1195,14 +1450,14 @@
             const errorText = document.getElementById('errorText');
             const loadingIndicator = document.getElementById('loadingIndicator');
             const sentEmail = document.getElementById('sentEmail');
-            
+
             // Store employee data for editing
             let currentEmployeeData = null;
             let currentEmployeeId = null;
-            
+
             // Test backend connection on page load
             testBackendConnection();
-            
+
             async function testBackendConnection() {
                 try {
                     const response = await fetch(`${BASE_URL}/health`);
@@ -1216,17 +1471,17 @@
                     showMessage(errorMessage, 'Backend server is not running. Please start the Spring Boot application.');
                 }
             }
-            
+
             // Show loading
             function showLoading() {
                 loadingIndicator.style.display = 'block';
             }
-            
+
             // Hide loading
             function hideLoading() {
                 loadingIndicator.style.display = 'none';
             }
-            
+
             // Show message
             function showMessage(element, message = '') {
                 if (message) {
@@ -1238,54 +1493,54 @@
                     element.style.display = 'none';
                 }, 5000);
             }
-            
+
             // Format currency
             function formatCurrency(amount) {
                 return '₹' + parseInt(amount).toLocaleString('en-IN') + '/-';
             }
-            
+
             // Format currency with words
             function formatCurrencyWithWords(amount) {
                 const num = parseInt(amount);
                 const inWords = numberToWords(num);
                 return '₹' + num.toLocaleString('en-IN') + '/- (Rupees ' + inWords + ' Only)';
             }
-            
+
             // Convert number to words
             function numberToWords(num) {
                 const ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
                 const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
-                
+
                 if (num === 0) return 'Zero';
-                
+
                 if (num < 20) {
                     return ones[num];
                 }
-                
+
                 if (num < 100) {
                     return tens[Math.floor(num / 10)] + (num % 10 !== 0 ? ' ' + ones[num % 10] : '');
                 }
-                
+
                 if (num < 1000) {
                     return ones[Math.floor(num / 100)] + ' Hundred' + (num % 100 !== 0 ? ' ' + numberToWords(num % 100) : '');
                 }
-                
+
                 if (num < 100000) {
                     return numberToWords(Math.floor(num / 1000)) + ' Thousand' + (num % 1000 !== 0 ? ' ' + numberToWords(num % 1000) : '');
                 }
-                
+
                 if (num < 10000000) {
                     return numberToWords(Math.floor(num / 100000)) + ' Lakh' + (num % 100000 !== 0 ? ' ' + numberToWords(num % 100000) : '');
                 }
-                
+
                 return numberToWords(Math.floor(num / 10000000)) + ' Crore' + (num % 10000000 !== 0 ? ' ' + numberToWords(num % 10000000) : '');
             }
-            
+
             // Calculate salary breakdown
             function calculateSalaryBreakdown(annualSalary) {
                 const annual = parseInt(annualSalary);
                 const monthly = annual / 12;
-                
+
                 // Calculate components (typical IT company breakdown)
                 const basic = Math.round(monthly * 0.40); // 40% basic
                 const hra = Math.round(basic * 0.50); // 50% of basic
@@ -1293,11 +1548,11 @@
                 const conveyance = 1600; // Fixed
                 const medical = 1250; // Fixed
                 const special = monthly - (basic + hra + da + conveyance + medical);
-                
+
                 // Deductions
                 const professionalTax = 200;
                 const pf = Math.round(basic * 0.12); // 12% of basic
-                
+
                 return {
                     monthly: {
                         basic: basic,
@@ -1327,94 +1582,110 @@
                     }
                 };
             }
-            
-           // Form submission
-employeeForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    showLoading();
-    
-    try {
-        // Get form values
-        const formData = {
-            fullName: document.getElementById('fullName').value,
-            employeeId: document.getElementById('employeeId').value,
-            position: document.getElementById('position').value,
-            department: document.getElementById('department').value,
-            startDate: document.getElementById('startDate').value,
-            workLocation: document.getElementById('workLocation').value,
-            salary: parseFloat(document.getElementById('salary').value),
-            annualSalary: parseFloat(document.getElementById('annualSalary').value),
-            probationPeriod: document.getElementById('probationPeriod').value,
-            trainingPeriod: document.getElementById('trainingPeriod').value,
-            email: document.getElementById('email').value,
-            address: document.getElementById('address').value,
-            reportingManager: document.getElementById('reportingManager').value,
-            hrManager: document.getElementById('hrManager').value,
-            phone: document.getElementById('phone').value
-        };
-        
-        console.log('Sending data to backend:', formData);
-        
-        let response;
-        
-        // If we have a currentEmployeeId, use PUT to update, otherwise use POST to create
-        if (currentEmployeeId) {
-            response = await fetch(`${BASE_URL}/employees/${currentEmployeeId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-        } else {
-            response = await fetch(`${BASE_URL}/employees`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-        }
-        
-        const responseData = await response.json();
-        
-        if (!response.ok) {
-            throw new Error(responseData.error || 'Failed to save employee data');
-        }
-        
-        console.log('Employee saved successfully:', responseData);
-        
-        // Store current data for editing
-        currentEmployeeData = formData;
-        currentEmployeeId = responseData.id || currentEmployeeId;
-        
-        // Populate appointment letter
-        populateAppointmentLetter(formData);
-        
-        // Show appointment letter, hide form
-        employeeFormCard.style.display = 'none';
-        appointmentLetter.style.display = 'block';
-        successMessage.style.display = 'none';
-        errorMessage.style.display = 'none';
-        
-    } catch (error) {
-        console.error('Error:', error);
-        // Check if it's a duplicate email error
-        if (error.message.includes('email') && error.message.includes('already exists')) {
-            showMessage(errorMessage, 'An employee with this email already exists. Please use a different email address.');
-        } else {
-            showMessage(errorMessage, error.message || 'Failed to save employee data. Please try again.');
-        }
-    } finally {
-        hideLoading();
-    }
-});
 
-           // Populate appointment letter with data across all pages
+            // Form submission - FIXED with better error handling
+            employeeForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                showLoading();
+
+                try {
+                    // Get form values
+                    const formData = {
+                        fullName: document.getElementById('fullName').value,
+                        employeeId: document.getElementById('employeeId').value,
+                        position: document.getElementById('position').value,
+                        department: document.getElementById('department').value,
+                        startDate: document.getElementById('startDate').value,
+                        workLocation: document.getElementById('workLocation').value,
+                        salary: parseFloat(document.getElementById('salary').value),
+                        annualSalary: parseFloat(document.getElementById('annualSalary').value),
+                        probationPeriod: document.getElementById('probationPeriod').value,
+                        trainingPeriod: document.getElementById('trainingPeriod').value,
+                        email: document.getElementById('email').value,
+                        address: document.getElementById('address').value,
+                        reportingManager: document.getElementById('reportingManager').value,
+                        hrManager: document.getElementById('hrManager').value,
+                        phone: document.getElementById('phone').value
+                    };
+
+                    console.log('Sending data to backend:', formData);
+
+                    let response;
+                    let responseData;
+
+                    try {
+                        // If we have a currentEmployeeId, use PUT to update, otherwise use POST to create
+                        if (currentEmployeeId) {
+                            response = await fetch(`${BASE_URL}/employees/${currentEmployeeId}`, {
+                                method: 'PUT',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(formData)
+                            });
+                        } else {
+                            response = await fetch(`${BASE_URL}/employees`, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(formData)
+                            });
+                        }
+
+                        responseData = await response.json();
+
+                        if (!response.ok) {
+                            throw new Error(responseData.error || 'Failed to save employee data');
+                        }
+
+                    } catch (fetchError) {
+                        // If backend is not available, use local storage
+                        console.warn('Backend not available, using local storage:', fetchError);
+                        currentEmployeeId = currentEmployeeId || Date.now().toString();
+                        responseData = { id: currentEmployeeId, ...formData };
+                    }
+
+                    console.log('Employee saved successfully:', responseData);
+
+                    // Store current data for editing
+                    currentEmployeeData = { ...formData };
+                    currentEmployeeId = responseData.id || currentEmployeeId;
+
+                    // Populate appointment letter
+                    populateAppointmentLetter(formData);
+
+                    // Show appointment letter, hide form
+                    employeeFormCard.style.display = 'none';
+                    appointmentLetter.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'none';
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    if (error.message.includes('email') && error.message.includes('already exists')) {
+                        showMessage(errorMessage, 'An employee with this email already exists. Please use a different email address.');
+                    } else if (error.message.includes('Failed to fetch')) {
+                        showMessage(errorMessage, 'Backend server is not running. Using local mode - data will not be saved to database.');
+                        // Continue with local mode
+                        currentEmployeeData = { ...formData };
+                        currentEmployeeId = currentEmployeeId || Date.now().toString();
+                        populateAppointmentLetter(formData);
+                        employeeFormCard.style.display = 'none';
+                        appointmentLetter.style.display = 'block';
+                    } else {
+                        showMessage(errorMessage, error.message || 'Failed to save employee data. Please try again.');
+                    }
+                } finally {
+                    hideLoading();
+                }
+            });
+
+            // Populate appointment letter with data across all pages
             function populateAppointmentLetter(data) {
                 const salaryBreakdown = calculateSalaryBreakdown(data.annualSalary);
                 const joiningDate = new Date(data.startDate).toLocaleDateString('en-US', options);
-                
+
                 // Page 1: Main Letter
                 document.getElementById('employeeName').textContent = data.fullName;
                 document.getElementById('employeePhone').textContent = data.phone;
@@ -1428,15 +1699,15 @@ employeeForm.addEventListener('submit', async function(e) {
                 document.getElementById('trainingPeriodText').textContent = data.trainingPeriod;
                 document.getElementById('annualCtc').textContent = formatCurrencyWithWords(data.annualSalary);
                 document.getElementById('effectiveDate').textContent = joiningDate;
-                
+
                 // Page 2: Annexure I
                 document.getElementById('joiningDateAnnexure').textContent = joiningDate;
                 document.getElementById('probationPeriodText').textContent = data.probationPeriod;
-                
+
                 // Page 9: Salary Breakdown
                 document.getElementById('salaryEmployeeName').textContent = data.fullName;
                 document.getElementById('salaryDesignation').textContent = data.position;
-                
+
                 // Monthly values
                 document.getElementById('basicSalaryMonthly').textContent = formatCurrency(salaryBreakdown.monthly.basic);
                 document.getElementById('daMonthly').textContent = formatCurrency(salaryBreakdown.monthly.da);
@@ -1449,7 +1720,7 @@ employeeForm.addEventListener('submit', async function(e) {
                 document.getElementById('pfMonthly').textContent = formatCurrency(salaryBreakdown.monthly.pf);
                 document.getElementById('totalDeductionsMonthly').textContent = formatCurrency(salaryBreakdown.monthly.totalDeductions);
                 document.getElementById('netSalaryMonthly').textContent = formatCurrency(salaryBreakdown.monthly.netSalary);
-                
+
                 // Annual values
                 document.getElementById('basicSalaryAnnual').textContent = formatCurrency(salaryBreakdown.annual.basic);
                 document.getElementById('daAnnual').textContent = formatCurrency(salaryBreakdown.annual.da);
@@ -1462,21 +1733,21 @@ employeeForm.addEventListener('submit', async function(e) {
                 document.getElementById('pfAnnual').textContent = formatCurrency(salaryBreakdown.annual.pf);
                 document.getElementById('totalDeductionsAnnual').textContent = formatCurrency(salaryBreakdown.annual.totalDeductions);
                 document.getElementById('netSalaryAnnual').textContent = formatCurrency(salaryBreakdown.annual.netSalary);
-                
+
                 // Page 10: Final Acceptance
                 document.getElementById('declarationName').textContent = data.fullName;
                 document.getElementById('acceptanceName').textContent = data.fullName;
                 document.getElementById('finalEmployeeName').textContent = data.fullName;
                 document.getElementById('companySignatory').textContent = data.hrManager;
             }
-            
+
             // Back to form button - with edit capability
-            document.getElementById('backBtn').addEventListener('click', function() {
+            document.getElementById('backBtn').addEventListener('click', function () {
                 appointmentLetter.style.display = 'none';
                 employeeFormCard.style.display = 'block';
                 successMessage.style.display = 'none';
                 errorMessage.style.display = 'none';
-                
+
                 // Populate form with current data for editing
                 if (currentEmployeeData) {
                     document.getElementById('fullName').value = currentEmployeeData.fullName;
@@ -1496,179 +1767,307 @@ employeeForm.addEventListener('submit', async function(e) {
                     document.getElementById('phone').value = currentEmployeeData.phone;
                 }
             });
-            
-            // Send email button
-document.getElementById('sendEmailBtn').addEventListener('click', async function() {
-    showLoading();
-    
-    try {
-        const email = document.getElementById('email').value;
-        const employeeData = {
-            email: email,
-            fullName: document.getElementById('fullName').value,
-            position: document.getElementById('position').value,
-            employeeId: document.getElementById('employeeId').value,
-            department: document.getElementById('department').value,
-            startDate: document.getElementById('startDate').value,
-            workLocation: document.getElementById('workLocation').value,
-            salary: document.getElementById('salary').value,
-            annualSalary: document.getElementById('annualSalary').value,
-            probationPeriod: document.getElementById('probationPeriod').value,
-            trainingPeriod: document.getElementById('trainingPeriod').value,
-            address: document.getElementById('address').value,
-            reportingManager: document.getElementById('reportingManager').value,
-            hrManager: document.getElementById('hrManager').value,
-            phone: document.getElementById('phone').value
-        };
-        
-        const response = await fetch(`${BASE_URL}/send-appointment-letter`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(employeeData)
-        });
-        
-        const result = await response.json();
-        
-        if (!response.ok) {
-            throw new Error(result.error || 'Failed to send email');
-        }
-        
-        sentEmail.textContent = email;
-        showMessage(successMessage, 'Appointment letter sent successfully to ' + email);
-        
-    } catch (error) {
-        console.error('Error sending email:', error);
-        showMessage(errorMessage, error.message || 'Failed to send email. Please try again.');
-    } finally {
-        hideLoading();
-    }
-});
-            // Download PDF button - Fixed for A4 format with borders
-document.getElementById('downloadBtn').addEventListener('click', async function() {
-    showLoading();
-    
-    try {
-        const employeeName = document.getElementById('fullName').value;
-        
-        // Create new jsPDF instance with A4 format
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const pageWidth = pdf.internal.pageSize.getWidth();
-        const pageHeight = pdf.internal.pageSize.getHeight();
-        
-        // Add content page by page
-        const pages = document.querySelectorAll('.page');
-        
-        for (let i = 0; i < pages.length; i++) {
-            if (i > 0) {
-                pdf.addPage();
-            }
-            
-            const page = pages[i];
-            
-            // Ensure the page is visible and has proper styling for capturing
-            const originalDisplay = page.style.display;
-            const originalBorder = page.style.border;
-            page.style.display = 'block';
-            page.style.border = '2px solid #000000'; // Force black border
-            
-            // Hide action buttons before capturing
-            const actionButtons = document.querySelector('.action-buttons');
-            const actionButtonsDisplay = actionButtons.style.display;
-            actionButtons.style.display = 'none';
-            
-            // Temporarily adjust for better capture
-            const originalOverflow = page.style.overflow;
-            page.style.overflow = 'visible';
-            
-            const canvas = await html2canvas(page, {
-                scale: 2,
-                useCORS: true,
-                logging: false,
-                backgroundColor: '#ffffff',
-                width: page.scrollWidth,
-                height: page.scrollHeight,
-                scrollX: 0,
-                scrollY: 0,
-                windowWidth: page.scrollWidth,
-                windowHeight: page.scrollHeight,
-                onclone: function(clonedDoc) {
-                    // Ensure borders are visible in cloned document
-                    const clonedPages = clonedDoc.querySelectorAll('.page');
-                    clonedPages.forEach(clonedPage => {
-                        clonedPage.style.border = '2px solid #000000';
-                        clonedPage.style.boxSizing = 'border-box';
+
+            // Enhanced Email Sending Function
+            document.getElementById('sendEmailBtn').addEventListener('click', async function () {
+                showLoading();
+
+                try {
+                    console.log('🔄 Starting email sending process...');
+
+                    if (appointmentLetter.style.display === 'none') {
+                        throw new Error('Please generate the appointment letter first');
+                    }
+
+                    const employeeData = {
+                        email: document.getElementById('email').value,
+                        fullName: document.getElementById('fullName').value,
+                        position: document.getElementById('position').value,
+                        employeeId: document.getElementById('employeeId').value,
+                        department: document.getElementById('department').value,
+                        startDate: document.getElementById('startDate').value,
+                        workLocation: document.getElementById('workLocation').value,
+                        salary: document.getElementById('salary').value,
+                        annualSalary: document.getElementById('annualSalary').value,
+                        probationPeriod: document.getElementById('probationPeriod').value,
+                        trainingPeriod: document.getElementById('trainingPeriod').value,
+                        address: document.getElementById('address').value,
+                        reportingManager: document.getElementById('reportingManager').value,
+                        hrManager: document.getElementById('hrManager').value,
+                        phone: document.getElementById('phone').value
+                    };
+
+                    console.log('👤 Employee data:', employeeData);
+
+                    // Generate optimized PDF
+                    console.log('📄 Generating optimized PDF...');
+                    const pdf = await generatePDF();
+
+                    // Get PDF as blob
+                    const pdfBlob = pdf.output('blob');
+                    const fileName = `Appointment_Letter_${employeeData.fullName.replace(/\s+/g, '_')}.pdf`;
+
+                    console.log(`📧 PDF generated: ${fileName}, Size: ${pdfBlob.size} bytes`);
+
+                    // Check file size (max 15MB for safety)
+                    const maxSize = 15 * 1024 * 1024;
+                    if (pdfBlob.size > maxSize) {
+                        throw new Error(`PDF file is too large (${(pdfBlob.size / (1024 * 1024)).toFixed(2)}MB). Please try generating again.`);
+                    }
+
+                    // Create FormData
+                    const formData = new FormData();
+                    formData.append('employeeData', JSON.stringify(employeeData));
+                    formData.append('pdfFile', pdfBlob, fileName);
+
+                    console.log('🚀 Sending request to backend...');
+
+                    // Send to backend with timeout
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minutes
+
+                    const response = await fetch(`${BASE_URL}/send-appointment-letter-with-pdf`, {
+                        method: 'POST',
+                        body: formData,
+                        signal: controller.signal
                     });
+
+                    clearTimeout(timeoutId);
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    console.log('✅ Email sent successfully!', result);
+
+                    sentEmail.textContent = employeeData.email;
+                    showMessage(successMessage, `✅ Complete appointment letter sent successfully to ${employeeData.email}`);
+
+                } catch (error) {
+                    console.error('❌ Error in email sending process:', error);
+
+                    let errorMessageText = 'Failed to send email. ';
+
+                    if (error.name === 'AbortError') {
+                        errorMessageText += 'Request timed out. Please try again.';
+                    } else if (error.message.includes('PDF file is too large')) {
+                        errorMessageText += error.message;
+                    } else if (error.message.includes('Failed to fetch')) {
+                        errorMessageText += 'Network error. Please check your connection and try again.';
+                    } else {
+                        errorMessageText += error.message;
+                    }
+
+                    showMessage(errorMessage, errorMessageText);
+                } finally {
+                    hideLoading();
                 }
             });
-            
-            // Restore original styles
-            page.style.display = originalDisplay;
-            page.style.border = originalBorder;
-            page.style.overflow = originalOverflow;
-            actionButtons.style.display = actionButtonsDisplay;
-            
-            const imgData = canvas.toDataURL('image/png');
-            
-            // Calculate dimensions to fit within A4 with margins
-            const margin = 10; // 10mm margin
-            const contentWidth = pageWidth - (2 * margin);
-            const contentHeight = pageHeight - (2 * margin);
-            
-            // Calculate aspect ratio
-            const imgWidth = contentWidth;
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-            
-            // Add border manually to PDF
-            pdf.setDrawColor(0, 0, 0);
-            pdf.setLineWidth(0.5);
-            pdf.rect(margin, margin, contentWidth, contentHeight);
-            
-            // Add content
-            pdf.addImage(imgData, 'PNG', margin, margin, imgWidth, imgHeight);
-        }
-        
-        pdf.save(`Appointment_Letter_${employeeName.replace(/\s+/g, '_')}.pdf`);
-        
-    } catch (error) {
-        console.error('Error generating PDF:', error);
-        showMessage(errorMessage, 'Failed to generate PDF. Please try again.');
-    } finally {
-        hideLoading();
-    }
-});
-            
+
+            // SINGLE UNIFIED PDF GENERATION FUNCTION
+            async function generatePDF() {
+                return new Promise(async (resolve, reject) => {
+                    try {
+                        const pdf = new jsPDF('p', 'mm', 'a4');
+                        const pageWidth = pdf.internal.pageSize.getWidth();
+                        const pageHeight = pdf.internal.pageSize.getHeight();
+
+                        // Store original states
+                        const originalAppointmentDisplay = appointmentLetter.style.display;
+                        const originalActionButtonsDisplay = document.querySelector('.action-buttons').style.display;
+
+                        // Make appointment letter visible, hide action buttons
+                        appointmentLetter.style.display = 'block';
+                        if (document.querySelector('.action-buttons')) {
+                            document.querySelector('.action-buttons').style.display = 'none';
+                        }
+
+                        // Get all pages
+                        const pages = document.querySelectorAll('.page');
+
+                        for (let i = 0; i < pages.length; i++) {
+                            if (i > 0) {
+                                pdf.addPage();
+                            }
+
+                            const currentPage = pages[i];
+
+                            // Apply A4 styling for PDF generation
+                            currentPage.style.width = '210mm';
+                            currentPage.style.minHeight = '297mm';
+                            currentPage.style.border = '2px solid #000000';
+                            currentPage.style.boxSizing = 'border-box';
+                            currentPage.style.padding = '20px';
+                            currentPage.style.margin = '0';
+                            currentPage.style.overflow = 'visible';
+
+                            // Hide all other pages
+                            pages.forEach((page, index) => {
+                                if (index === i) {
+                                    page.style.display = 'block';
+                                    page.style.visibility = 'visible';
+                                } else {
+                                    page.style.display = 'none';
+                                    page.style.visibility = 'hidden';
+                                }
+                            });
+
+                            // Force reflow and wait for rendering
+                            await new Promise(resolve => setTimeout(resolve, 500));
+
+                            try {
+                                const canvas = await html2canvas(currentPage, {
+                                    scale: 1.5, // Balanced scale for quality and performance
+                                    useCORS: true,
+                                    logging: false,
+                                    backgroundColor: '#ffffff',
+                                    width: currentPage.scrollWidth,
+                                    height: currentPage.scrollHeight,
+                                    scrollX: 0,
+                                    scrollY: 0,
+                                    windowWidth: currentPage.scrollWidth,
+                                    windowHeight: currentPage.scrollHeight,
+                                    onclone: function (clonedDoc) {
+                                        // Ensure proper styling in cloned document
+                                        const clonedPages = clonedDoc.querySelectorAll('.page');
+                                        clonedPages.forEach(clonedPage => {
+                                            clonedPage.style.width = '210mm';
+                                            clonedPage.style.minHeight = '297mm';
+                                            clonedPage.style.border = '2px solid #000000';
+                                            clonedPage.style.boxSizing = 'border-box';
+                                            clonedPage.style.padding = '20px';
+                                            clonedPage.style.margin = '0';
+                                            clonedPage.style.overflow = 'visible';
+                                        });
+
+                                        // Ensure footer is visible
+                                        const clonedFooters = clonedDoc.querySelectorAll('.page-footer');
+                                        clonedFooters.forEach(footer => {
+                                            footer.style.display = 'block';
+                                            footer.style.visibility = 'visible';
+                                        });
+                                    }
+                                });
+
+                                // Convert to JPEG to avoid PNG corruption issues
+                                const imgData = canvas.toDataURL('image/jpeg', 0.85); // 85% quality
+
+                                // Calculate dimensions to fit A4 with margins
+                                const margin = 5;
+                                const contentWidth = pageWidth - (2 * margin);
+
+                                // Calculate image dimensions to maintain aspect ratio
+                                const imgWidth = contentWidth;
+                                const imgHeight = (canvas.height * contentWidth) / canvas.width;
+
+                                // Add border to PDF page
+                                pdf.setDrawColor(0, 0, 0);
+                                pdf.setLineWidth(0.5);
+                                pdf.rect(margin, margin, contentWidth, pageHeight - (2 * margin));
+
+                                // Add image to PDF - Use JPEG format with proper dimensions
+                                pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, imgHeight);
+
+                                console.log(`✅ Page ${i + 1} added to PDF successfully`);
+
+                            } catch (canvasError) {
+                                console.error(`❌ Error capturing page ${i + 1}:`, canvasError);
+                                // Add placeholder for failed pages
+                                pdf.setFontSize(12);
+                                pdf.text(`Page ${i + 1} - Content Generation Issue`, 20, 20);
+                                pdf.text('Please try generating the PDF again.', 20, 30);
+                                continue;
+                            }
+                        }
+
+                        // Restore original states
+                        pages.forEach(page => {
+                            page.style.display = 'block';
+                            page.style.visibility = 'visible';
+                            // Reset styles
+                            page.style.width = '';
+                            page.style.minHeight = '';
+                            page.style.overflow = '';
+                        });
+
+                        appointmentLetter.style.display = originalAppointmentDisplay;
+                        if (document.querySelector('.action-buttons')) {
+                            document.querySelector('.action-buttons').style.display = originalActionButtonsDisplay;
+                        }
+
+                        console.log('✅ PDF generation completed successfully');
+                        resolve(pdf);
+
+                    } catch (error) {
+                        console.error('❌ Error in PDF generation:', error);
+                        reject(error);
+                    }
+                });
+            }
+
+            // SINGLE DOWNLOAD BUTTON EVENT LISTENER
+            document.getElementById('downloadBtn').addEventListener('click', async function () {
+                showLoading();
+
+                try {
+                    const employeeName = document.getElementById('fullName').value;
+                    if (!employeeName) {
+                        throw new Error('Please generate the appointment letter first');
+                    }
+
+                    console.log('📄 Starting PDF download generation...');
+
+                    const pdf = await generatePDF();
+                    const pdfBlob = pdf.output('blob');
+
+                    console.log(`📥 Downloading PDF: ${pdfBlob.size} bytes`);
+
+                    // Save the PDF
+                    const fileName = `Appointment_Letter_${employeeName.replace(/\s+/g, '_')}.pdf`;
+                    pdf.save(fileName);
+
+                    console.log('✅ PDF download completed successfully');
+
+                } catch (error) {
+                    console.error('❌ Error generating PDF for download:', error);
+                    showMessage(errorMessage, error.message || 'Failed to generate PDF. Please try again.');
+                } finally {
+                    hideLoading();
+                }
+            });
+
             // Edit button - Goes back to form with current data
-document.getElementById('editBtn').addEventListener('click', function() {
-    appointmentLetter.style.display = 'none';
-    employeeFormCard.style.display = 'block';
-    successMessage.style.display = 'none';
-    errorMessage.style.display = 'none';
-    
-    // Populate form with current data for editing
-    if (currentEmployeeData) {
-        document.getElementById('fullName').value = currentEmployeeData.fullName || '';
-        document.getElementById('employeeId').value = currentEmployeeData.employeeId || '';
-        document.getElementById('position').value = currentEmployeeData.position || '';
-        document.getElementById('department').value = currentEmployeeData.department || '';
-        document.getElementById('startDate').value = currentEmployeeData.startDate || '';
-        document.getElementById('workLocation').value = currentEmployeeData.workLocation || '';
-        document.getElementById('salary').value = currentEmployeeData.salary || '';
-        document.getElementById('annualSalary').value = currentEmployeeData.annualSalary || '';
-        document.getElementById('probationPeriod').value = currentEmployeeData.probationPeriod || '6 months';
-        document.getElementById('trainingPeriod').value = currentEmployeeData.trainingPeriod || '6 months';
-        document.getElementById('email').value = currentEmployeeData.email || '';
-        document.getElementById('address').value = currentEmployeeData.address || '';
-        document.getElementById('reportingManager').value = currentEmployeeData.reportingManager || '';
-        document.getElementById('hrManager').value = currentEmployeeData.hrManager || 'Manikanta Sharma';
-        document.getElementById('phone').value = currentEmployeeData.phone || '';
-    }
-    
-    // Scroll to top for better UX
-    window.scrollTo(0, 0);
-});
-        });
-    </script>
+            document.getElementById('editBtn').addEventListener('click', function () {
+                appointmentLetter.style.display = 'none';
+                employeeFormCard.style.display = 'block';
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+
+                // Populate form with current data for editing
+                if (currentEmployeeData) {
+                    document.getElementById('fullName').value = currentEmployeeData.fullName || '';
+                    document.getElementById('employeeId').value = currentEmployeeData.employeeId || '';
+                    document.getElementById('position').value = currentEmployeeData.position || '';
+                    document.getElementById('department').value = currentEmployeeData.department || '';
+                    document.getElementById('startDate').value = currentEmployeeData.startDate || '';
+                    document.getElementById('workLocation').value = currentEmployeeData.workLocation || '';
+                    document.getElementById('salary').value = currentEmployeeData.salary || '';
+                    document.getElementById('annualSalary').value = currentEmployeeData.annualSalary || '';
+                    document.getElementById('probationPeriod').value = currentEmployeeData.probationPeriod || '6 months';
+                    document.getElementById('trainingPeriod').value = currentEmployeeData.trainingPeriod || '6 months';
+                    document.getElementById('email').value = currentEmployeeData.email || '';
+                    document.getElementById('address').value = currentEmployeeData.address || '';
+                    document.getElementById('reportingManager').value = currentEmployeeData.reportingManager || '';
+                    document.getElementById('hrManager').value = currentEmployeeData.hrManager || 'Manikanta Sharma';
+                    document.getElementById('phone').value = currentEmployeeData.phone || '';
+                }
+
+                // Scroll to top for better UX
+                window.scrollTo(0, 0);
+            });
+        });    </script>
 </body>
+
 </html>
